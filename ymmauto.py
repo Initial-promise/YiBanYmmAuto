@@ -76,8 +76,8 @@ def saveData():
 
 def login():
     driver2.get("https://mp.yiban.cn")
-    driver2.find_element_by_id('account').send_keys('school_zqxy@yiban.cn')
-    driver2.find_element_by_id('password').send_keys('yiban.cn')
+    driver2.find_element_by_id('account').send_keys(publicAccount)#此处变量为自己学校公共平台账号
+    driver2.find_element_by_id('password').send_keys(publicPassword)
 
     driver2.find_element_by_id('loginSubmit').click()
     print("正在登录公共平台...")
