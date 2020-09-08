@@ -18,7 +18,7 @@ print("正在配置浏览器驱动")
 # driver2=webdriver.Chrome(executable_path="G:\\chromedriver_win32\\chromedriver.exe",options=options)
 # drive = webdriver.Chrome(executable_path="chromedriver.exe",options=options)
 # driver2=webdriver.Chrome(executable_path="chromedriver.exe",options=options)
-drive=webdriver.Chrome(executable_path="G:\\chromedriver_win32\\chromedriver.exe")
+drive=webdriver.Chrome(executable_path="G:\\chromedriver_win32\\chromedriver.exe")#驱动路径，options表示无头
 driver2=webdriver.Chrome(executable_path="G:\\chromedriver_win32\\chromedriver.exe")
 
 token=''
@@ -58,9 +58,7 @@ def getToken():
         # print(imgCode)
     cookies=drive.get_cookies()
 
-    print(cookies)
-    print(cookies[1])
-    print(cookies[1]['value'])
+    #print(cookies)
     token=cookies[1]['value']
     # print(token)
     return token
@@ -128,7 +126,6 @@ def search(userId):
 
 def downloadData():
     global now
-    print(1)
     print(token)
     while True:
         num=input("请输入要爬取的页数(每页100条数据)")
