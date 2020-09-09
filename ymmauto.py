@@ -172,8 +172,6 @@ def downloadData():
 
 if __name__ == '__main__':
     token=getToken()
-    print("main")
-    print(token)
     saveData()
     # downloadData(token)
     print("数据已保存到ymm.xls")
